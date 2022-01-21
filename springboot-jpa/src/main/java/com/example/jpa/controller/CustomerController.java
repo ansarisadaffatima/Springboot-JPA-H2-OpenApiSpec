@@ -56,7 +56,7 @@ public class CustomerController {
 		return new ResponseEntity<>(customers, HttpStatus.OK);
 	}
 	
-	@GetMapping("/findCustomerByAge/{age}")
+	@GetMapping("/findCustomerByAgeGreaterthan/{age}")
 	public ResponseEntity<List<Customer>> findByAgeGreaterThan(@PathVariable Long age ){
 		List<Customer> customers = customerService.findByAgeGreaterThan(age);
 		if (customers.isEmpty() || customers.size() == 0) {
